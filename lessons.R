@@ -1,0 +1,7 @@
+library(devtools)
+install_github("kendomaniac/docker4seq", ref="master")
+library(docker4seq)
+downloadContainers(group="docker")
+install_github("kendomaniac/rCASC", ref="master")
+library(rCASC)
+downloadContainers(group="docker")
