@@ -12,3 +12,7 @@ downloadContainers(group="docker")
 #chmod + fastqc in FastQC folder downloaded
 #./fastqc
 # in cd dataset0 cartella del file -> fastqc ra100k.R1.fastq
+
+#MultiQC directly from the terminal with docker container 
+#docker run -t -v `pwd`:`pwd` -w `pwd` ewels/multiqc
+
