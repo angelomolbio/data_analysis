@@ -1,0 +1,83 @@
+skewer v0.2.2 [April 4, 2016]
+COMMAND LINE:	/bin/skewer-0.2.2-linux-x86_64 -t 8 -x AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -y AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT sb1m.R1.fastq -l 40
+Input file:	sb1m.R1.fastq
+trimmed:	sb1m.R1-trimmed.fastq
+
+Parameters used:
+-- 3' end adapter sequence (-x):	AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+-- maximum error ratio allowed (-r):	0.100
+-- maximum indel error ratio allowed (-d):	0.030
+-- minimum read length allowed after trimming (-l):	40
+-- file format (-f):		Sanger/Illumina 1.8+ FASTQ (auto detected)
+-- minimum overlap length for adapter detection (-k):	3
+-- number of concurrent threads (-t):	8
+Tue Mar 15 15:03:28 2022 >> started
+
+Tue Mar 15 15:03:29 2022 >> done (1.522s)
+1000000 reads processed; of these:
+      5 ( 0.00%) short reads filtered out after trimming by size control
+      0 ( 0.00%) empty reads filtered out after trimming by size control
+ 999995 (100.00%) reads available; of these:
+  37286 ( 3.73%) trimmed reads available after processing
+ 962709 (96.27%) untrimmed reads available after processing
+
+Length distribution of reads after trimming:
+length	count	percentage
+ 43	     1	  0.00%
+ 44	     1	  0.00%
+ 45	     2	  0.00%
+ 46	     3	  0.00%
+ 47	     2	  0.00%
+ 48	     2	  0.00%
+ 49	     3	  0.00%
+ 50	     3	  0.00%
+ 51	     2	  0.00%
+ 52	     2	  0.00%
+ 53	     7	  0.00%
+ 54	     5	  0.00%
+ 55	     1	  0.00%
+ 56	     2	  0.00%
+ 57	     9	  0.00%
+ 58	     5	  0.00%
+ 59	     6	  0.00%
+ 60	     5	  0.00%
+ 61	     9	  0.00%
+ 62	    17	  0.00%
+ 63	    13	  0.00%
+ 64	     9	  0.00%
+ 65	    18	  0.00%
+ 66	    28	  0.00%
+ 67	    19	  0.00%
+ 68	    25	  0.00%
+ 69	    30	  0.00%
+ 70	    49	  0.00%
+ 71	    41	  0.00%
+ 72	    59	  0.01%
+ 73	    69	  0.01%
+ 74	    62	  0.01%
+ 75	    87	  0.01%
+ 76	    85	  0.01%
+ 77	    98	  0.01%
+ 78	   106	  0.01%
+ 79	   125	  0.01%
+ 80	   128	  0.01%
+ 81	   158	  0.02%
+ 82	   159	  0.02%
+ 83	   203	  0.02%
+ 84	   230	  0.02%
+ 85	   238	  0.02%
+ 86	   305	  0.03%
+ 87	   309	  0.03%
+ 88	   374	  0.04%
+ 89	   426	  0.04%
+ 90	   481	  0.05%
+ 91	   597	  0.06%
+ 92	   568	  0.06%
+ 93	   868	  0.09%
+ 94	  1610	  0.16%
+ 95	  2352	  0.24%
+ 96	  5749	  0.57%
+ 97	 21521	  2.15%
+ 98	     0	  0.00%
+ 99	     0	  0.00%
+100	962709	 96.27%

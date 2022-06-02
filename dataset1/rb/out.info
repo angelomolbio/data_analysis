@@ -1,0 +1,3 @@
+mv run.info /home/rcaloger/test/RNAseq_data/exercise1/rb
+mv *trimmed*.fastq.gz /home/rcaloger/test/RNAseq_data/exercise1/rb
+mv *.log /home/rcaloger/test/RNAseq_data/exercise1/rb

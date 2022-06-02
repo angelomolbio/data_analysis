@@ -1,0 +1,15 @@
+Sample	Filename	File type	Encoding	Total Sequences	Sequences flagged as poor quality	Sequence length	%GC	total_deduplicated_percentage	avg_sequence_length	basic_statistics	per_base_sequence_quality	per_tile_sequence_quality	per_sequence_quality_scores	per_base_sequence_content	per_sequence_gc_content	per_base_n_content	sequence_length_distribution	sequence_duplication_levels	overrepresented_sequences	adapter_content
+ra1m.R1	ra1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	50.0	92.9	100.0	pass	pass	pass	pass	fail	fail	pass	pass	pass	fail	pass
+rb1m.R1	rb1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	50.0	93.17	100.0	pass	pass	pass	pass	fail	fail	pass	pass	pass	fail	pass
+rc1m.R1	rc1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	49.0	95.39	100.0	pass	pass	pass	pass	fail	pass	pass	pass	pass	warn	pass
+rd1m.R1	rd1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	49.0	95.66	100.0	pass	pass	pass	pass	fail	warn	pass	pass	pass	fail	pass
+re1m.R1	re1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	49.0	94.82000000000001	100.0	pass	pass	pass	pass	fail	warn	pass	pass	pass	warn	pass
+rf1m.R1	rf1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	49.0	94.96	100.0	pass	pass	pass	pass	fail	warn	pass	pass	pass	fail	pass
+rg1m.R1	rg1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	101.0	49.0	95.32000000000001	101.0	pass	pass	pass	pass	fail	pass	pass	pass	pass	warn	pass
+sa1m.R1	sa1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	101.0	49.0	93.66	101.0	pass	pass	pass	pass	fail	fail	pass	pass	pass	fail	pass
+sb1m.R1	sb1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	50.0	87.99	100.0	pass	pass	pass	pass	fail	fail	pass	pass	pass	fail	pass
+sc1m.R1	sc1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	50.0	93.91000000000001	100.0	pass	pass	pass	pass	fail	fail	pass	pass	pass	fail	pass
+sd1m.R1	sd1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	50.0	93.57	100.0	pass	pass	pass	pass	fail	warn	pass	pass	pass	warn	pass
+se1m.R1	se1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	49.0	95.49	100.0	pass	pass	pass	pass	fail	pass	pass	pass	pass	warn	pass
+sf1m.R1	sf1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	50.0	85.11999999999999	100.0	pass	pass	pass	pass	fail	fail	pass	pass	pass	fail	pass
+sg1m.R1	sg1m.R1.fastq.gz_tmp	Conventional base calls	Sanger / Illumina 1.9	10000.0	0.0	100.0	49.0	95.16	100.0	pass	pass	pass	pass	fail	warn	pass	pass	pass	fail	pass

@@ -1,0 +1,1221 @@
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(docker4seq)
+> folders <- list.dirs(path = ".", full.names = F, recursive = F)
+> home <- getwd()
+> for(i in folders){
++ 	setwd(i)
++ 	rnaseqCounts( group = "docker", fastq.folder = getwd(), scratch.folder = "/home/rcaloger/scratch", threads = 8, adapter5= "AGATCGGAAGAGCACACGTCTGAACTCCAGTCA", adapter3="AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT", seq.type = "se", min.length = 40, genome.folder = "/home/rcaloger/test/genomes/hg38", strandness = "none", save.bam = FALSE, org = "hg38", annotation.type = "gtfENSEMBL" )
++ 	setwd(home)
++ }
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed578224732fe1e09bf0f6462049dd6dea802007a31758886245932e8a7e03fc12a7
+
+Docker ID is:
+ 8224732fe1e0 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+ra1m.R1.fastq.gz
+Started analysis of ra1m.R1.fastq.gz_tmp
+Approx 10% complete for ra1m.R1.fastq.gz_tmp
+Approx 20% complete for ra1m.R1.fastq.gz_tmp
+Approx 30% complete for ra1m.R1.fastq.gz_tmp
+Approx 40% complete for ra1m.R1.fastq.gz_tmp
+Approx 50% complete for ra1m.R1.fastq.gz_tmp
+Approx 60% complete for ra1m.R1.fastq.gz_tmp
+Approx 70% complete for ra1m.R1.fastq.gz_tmp
+Approx 80% complete for ra1m.R1.fastq.gz_tmp
+Approx 90% complete for ra1m.R1.fastq.gz_tmp
+Approx 100% complete for ra1m.R1.fastq.gz_tmp
+Analysis complete for ra1m.R1.fastq.gz_tmp
+8224732fe1e09bf0f6462049dd6dea802007a31758886245932e8a7e03fc12a7
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+02321f3825e5487f37c24587fd8e0fdee66943b06695314002bee6d37c254841
+
+Docker ID is:
+ 02321f3825e5 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+02321f3825e5487f37c24587fd8e0fdee66943b06695314002bee6d37c254841
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+e2da55119f7fc60ab57da20bd0f0cb2413583a3ce7b73ce11e99bb83c9eba4c7
+
+Docker ID is:
+ e2da55119f7f 
+................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+e2da55119f7fc60ab57da20bd0f0cb2413583a3ce7b73ce11e99bb83c9eba4c7
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57d38cddba0dbc99bfd31372b90732631c7925c388ffbac86828b935d65700e7ae
+
+Docker ID is:
+ d38cddba0dbc 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+d38cddba0dbc99bfd31372b90732631c7925c388ffbac86828b935d65700e7ae
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed5775fb89900cb5da654c21f873287a938344e9a557a881d8c2f44a056500afa026
+
+Docker ID is:
+ 75fb89900cb5 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+Error response from daemon: can not get logs from container which is dead or marked for removal
+75fb89900cb5da654c21f873287a938344e9a557a881d8c2f44a056500afa026
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+f0d99aa58db84a776b36ae33329b2dbac662d77e229049f28204a5d9732f8a9f
+
+Docker ID is:
+ f0d99aa58db8 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+f0d99aa58db84a776b36ae33329b2dbac662d77e229049f28204a5d9732f8a9f
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+f324523ccbfcbd21ed4d9863ca934c52ff6a1c8536e8863c7d3bcbeee86450a0
+
+Docker ID is:
+ f324523ccbfc 
+...............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+f324523ccbfcbd21ed4d9863ca934c52ff6a1c8536e8863c7d3bcbeee86450a0
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed579fbe320bc91c577baf6e93b790b2f10137c7ae8b74f013b73fdd9dbc068a349d
+
+Docker ID is:
+ 9fbe320bc91c 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+9fbe320bc91c577baf6e93b790b2f10137c7ae8b74f013b73fdd9dbc068a349d
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed575e00a78d5a527e8571dd4ac955cde773f39288146af5745e7adcf9a718d3b0b5
+
+Docker ID is:
+ 5e00a78d5a52 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+Error response from daemon: can not get logs from container which is dead or marked for removal
+5e00a78d5a527e8571dd4ac955cde773f39288146af5745e7adcf9a718d3b0b5
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+afc569d2fb9f2662f33f8536f97da31e9dde3b40d3472feda3fec3189c9a07a6
+
+Docker ID is:
+ afc569d2fb9f 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+afc569d2fb9f2662f33f8536f97da31e9dde3b40d3472feda3fec3189c9a07a6
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+c6e2a5d01d3e5198b677c3b7a77c33cfbee5b3c39fc4e93745f8ccf2a5e8b9ce
+
+Docker ID is:
+ c6e2a5d01d3e 
+...............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+c6e2a5d01d3e5198b677c3b7a77c33cfbee5b3c39fc4e93745f8ccf2a5e8b9ce
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57bdd46b6bc1b9fe316be5d063e6e59e836506dee80f8957fb4639f53333e01cb0
+
+Docker ID is:
+ bdd46b6bc1b9 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+bdd46b6bc1b9fe316be5d063e6e59e836506dee80f8957fb4639f53333e01cb0
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57a3164f0349e591e18d883aa2f80b0b4e7b35d03429077e798e88842fdde5174f
+
+Docker ID is:
+ a3164f0349e5 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+rd1m.R1.fastq.gz
+Started analysis of rd1m.R1.fastq.gz_tmp
+Approx 10% complete for rd1m.R1.fastq.gz_tmp
+Approx 20% complete for rd1m.R1.fastq.gz_tmp
+Approx 30% complete for rd1m.R1.fastq.gz_tmp
+Approx 40% complete for rd1m.R1.fastq.gz_tmp
+Approx 50% complete for rd1m.R1.fastq.gz_tmp
+Approx 60% complete for rd1m.R1.fastq.gz_tmp
+Approx 70% complete for rd1m.R1.fastq.gz_tmp
+Approx 80% complete for rd1m.R1.fastq.gz_tmp
+Approx 90% complete for rd1m.R1.fastq.gz_tmp
+Approx 100% complete for rd1m.R1.fastq.gz_tmp
+Analysis complete for rd1m.R1.fastq.gz_tmp
+a3164f0349e591e18d883aa2f80b0b4e7b35d03429077e798e88842fdde5174f
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+a1f701f8be6c59ed9cee47204982130b75ca1cf4bfb48925d39b6a97031ac152
+
+Docker ID is:
+ a1f701f8be6c 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+a1f701f8be6c59ed9cee47204982130b75ca1cf4bfb48925d39b6a97031ac152
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+66d63d6c81f663a09d895aa546dd07568bd962f0a6cb804ce260b66c23c42520
+
+Docker ID is:
+ 66d63d6c81f6 
+................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+66d63d6c81f663a09d895aa546dd07568bd962f0a6cb804ce260b66c23c42520
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed577312779370e637105e36aeb215f4ce6c9e83a3b0990e3a80e68b28fec310fa81
+
+Docker ID is:
+ 7312779370e6 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+7312779370e637105e36aeb215f4ce6c9e83a3b0990e3a80e68b28fec310fa81
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed5743f036bfa6b20baae1989ee9d087d1360a7754c95da3b6088d3bedfc462c0c30
+
+Docker ID is:
+ 43f036bfa6b2 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+43f036bfa6b20baae1989ee9d087d1360a7754c95da3b6088d3bedfc462c0c30
+Error: No such container: 43f036bfa6b20baae1989ee9d087d1360a7754c95da3b6088d3bedfc462c0c30
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+959d7ee3450b37ff37738e3b64abc604c018adae45b4412e31a2b2b290d95f83
+
+Docker ID is:
+ 959d7ee3450b 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+959d7ee3450b37ff37738e3b64abc604c018adae45b4412e31a2b2b290d95f83
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+53d92fdd900f8716159670694773362cd661bebcd9a9cab1a9ae2cc793230fdd
+
+Docker ID is:
+ 53d92fdd900f 
+...............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+53d92fdd900f8716159670694773362cd661bebcd9a9cab1a9ae2cc793230fdd
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed578c5be849f93f7b7cd3d1120f2a0ae0f612df1a40aa9f0ea5ca374b85c5f00a72
+
+Docker ID is:
+ 8c5be849f93f 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+8c5be849f93f7b7cd3d1120f2a0ae0f612df1a40aa9f0ea5ca374b85c5f00a72
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed573451c388199276c8d1c7bf5f82b5567440fa03926744053efd0a4df5ec82d969
+
+Docker ID is:
+ 3451c3881992 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+3451c388199276c8d1c7bf5f82b5567440fa03926744053efd0a4df5ec82d969
+Error response from daemon: can not get logs from container which is dead or marked for removal
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+984617003ec68ebf9897277d7e174ae8bcc737bacfcd4459ecd62662087bd534
+
+Docker ID is:
+ 984617003ec6 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+984617003ec68ebf9897277d7e174ae8bcc737bacfcd4459ecd62662087bd534
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+3532ea5beb565259ad5aa791b0b8ca369dcb0fb444ab8da685a9f9044a6506c2
+
+Docker ID is:
+ 3532ea5beb56 
+..............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+3532ea5beb565259ad5aa791b0b8ca369dcb0fb444ab8da685a9f9044a6506c2
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57a82993a4272f960b13c1a64721c52c7780e3466fa372a7afc3338b793006db48
+
+Docker ID is:
+ a82993a4272f 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+a82993a4272f960b13c1a64721c52c7780e3466fa372a7afc3338b793006db48
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57086649c1e9038c891b4a3272008d9936456898888298c9e8ec11ba407b3c87ba
+
+Docker ID is:
+ 086649c1e903 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+086649c1e9038c891b4a3272008d9936456898888298c9e8ec11ba407b3c87ba
+Error: No such container: 086649c1e903
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+fe0d4f3bfe27c21bf60e118f4c36753079824359487277007a959b3a1bb58531
+
+Docker ID is:
+ fe0d4f3bfe27 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+fe0d4f3bfe27c21bf60e118f4c36753079824359487277007a959b3a1bb58531
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+06679a08edbf58e7569857637c148e8a835ad5fc20a41fb093d84947fbb647d7
+
+Docker ID is:
+ 06679a08edbf 
+.................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+06679a08edbf58e7569857637c148e8a835ad5fc20a41fb093d84947fbb647d7
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57de7fef93771b02c3b16f27a030b0b09e8429ef735565455c0fd5d07cdae005e8
+
+Docker ID is:
+ de7fef93771b 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+de7fef93771b02c3b16f27a030b0b09e8429ef735565455c0fd5d07cdae005e8
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57c27c4be289140b69d9ec27486bde9882dba16b6f26629aaa39082616f52f6831
+
+Docker ID is:
+ c27c4be28914 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+sa1m.R1.fastq.gz
+Started analysis of sa1m.R1.fastq.gz_tmp
+Approx 10% complete for sa1m.R1.fastq.gz_tmp
+Approx 20% complete for sa1m.R1.fastq.gz_tmp
+Approx 30% complete for sa1m.R1.fastq.gz_tmp
+Approx 40% complete for sa1m.R1.fastq.gz_tmp
+Approx 50% complete for sa1m.R1.fastq.gz_tmp
+Approx 60% complete for sa1m.R1.fastq.gz_tmp
+Approx 70% complete for sa1m.R1.fastq.gz_tmp
+Approx 80% complete for sa1m.R1.fastq.gz_tmp
+Approx 90% complete for sa1m.R1.fastq.gz_tmp
+Approx 100% complete for sa1m.R1.fastq.gz_tmp
+Analysis complete for sa1m.R1.fastq.gz_tmp
+c27c4be289140b69d9ec27486bde9882dba16b6f26629aaa39082616f52f6831
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+0623f46bcf106e458590ca9994d8359254547f5bc7c402155e33bbdd83df5a4f
+
+Docker ID is:
+ 0623f46bcf10 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+0623f46bcf106e458590ca9994d8359254547f5bc7c402155e33bbdd83df5a4f
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+30dd2bf0edb7ff601cdb4867f93ca9ccb656fc8cae86294cb5c954580c9081f3
+
+Docker ID is:
+ 30dd2bf0edb7 
+............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+30dd2bf0edb7ff601cdb4867f93ca9ccb656fc8cae86294cb5c954580c9081f3
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57254a41fcf26740c1d99397a0c07a3c254012bc3344cce2656d9b447c2bc1f8ed
+
+Docker ID is:
+ 254a41fcf267 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+254a41fcf26740c1d99397a0c07a3c254012bc3344cce2656d9b447c2bc1f8ed
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57dec9308acb15fdbd7647eaf710445b2c0452efbf3f8558fa881802fb9517dbc4
+
+Docker ID is:
+ dec9308acb15 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+sb1m.R1.fastq.gz
+Started analysis of sb1m.R1.fastq.gz_tmp
+Approx 10% complete for sb1m.R1.fastq.gz_tmp
+Approx 20% complete for sb1m.R1.fastq.gz_tmp
+Approx 30% complete for sb1m.R1.fastq.gz_tmp
+Approx 40% complete for sb1m.R1.fastq.gz_tmp
+Approx 50% complete for sb1m.R1.fastq.gz_tmp
+Approx 60% complete for sb1m.R1.fastq.gz_tmp
+Approx 70% complete for sb1m.R1.fastq.gz_tmp
+Approx 80% complete for sb1m.R1.fastq.gz_tmp
+Approx 90% complete for sb1m.R1.fastq.gz_tmp
+Approx 100% complete for sb1m.R1.fastq.gz_tmp
+Analysis complete for sb1m.R1.fastq.gz_tmp
+dec9308acb15fdbd7647eaf710445b2c0452efbf3f8558fa881802fb9517dbc4
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+f6a8453ed3e6deddfa3a2cf9c0046df127f5d3b8df7313f044e5bb351a201056
+
+Docker ID is:
+ f6a8453ed3e6 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+f6a8453ed3e6deddfa3a2cf9c0046df127f5d3b8df7313f044e5bb351a201056
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+ecfdaab49edbf4a0e6cfa4fc6eecea2fbd16d5b551e7a30f0c8568ffc01ad482
+
+Docker ID is:
+ ecfdaab49edb 
+.................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+ecfdaab49edbf4a0e6cfa4fc6eecea2fbd16d5b551e7a30f0c8568ffc01ad482
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57ab87b7d6598672fca1e4a3608fa7dfdc3562b07883e0d3551795bc024fd92f1f
+
+Docker ID is:
+ ab87b7d65986 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+ab87b7d6598672fca1e4a3608fa7dfdc3562b07883e0d3551795bc024fd92f1f
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed572d6266b946b4127dc8c0e6ee2558e90a1b0d266bf2ffbd41588ec5a00c66fb55
+
+Docker ID is:
+ 2d6266b946b4 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+2d6266b946b4127dc8c0e6ee2558e90a1b0d266bf2ffbd41588ec5a00c66fb55
+Error: No such container: 2d6266b946b4127dc8c0e6ee2558e90a1b0d266bf2ffbd41588ec5a00c66fb55
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+3f9cd5d40e67b321c55a395c87b62244eac1b1cc788b549fb2cdf77bf20656ff
+
+Docker ID is:
+ 3f9cd5d40e67 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+3f9cd5d40e67b321c55a395c87b62244eac1b1cc788b549fb2cdf77bf20656ff
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+7100b1b2f59238714bada5cb8118dd86a53b3c1c1db2e62e46cdcade46afca4c
+
+Docker ID is:
+ 7100b1b2f592 
+.............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+7100b1b2f59238714bada5cb8118dd86a53b3c1c1db2e62e46cdcade46afca4c
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57c4e363df7807ee7f4d9083902e2d3308d7380087d0d06c48202f89f3b8f83bc6
+
+Docker ID is:
+ c4e363df7807 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+c4e363df7807ee7f4d9083902e2d3308d7380087d0d06c48202f89f3b8f83bc6
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57a83ecc700ca095de401d32992bf6cc37e10c2a4b0612a0b5727e398dded3a3d5
+
+Docker ID is:
+ a83ecc700ca0 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+Error response from daemon: can not get logs from container which is dead or marked for removal
+a83ecc700ca095de401d32992bf6cc37e10c2a4b0612a0b5727e398dded3a3d5
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+078b13c97aa580eebcce95aa2ff80b3a23742b1e5a1c43cd54bc12d14d18dc2f
+
+Docker ID is:
+ 078b13c97aa5 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+078b13c97aa580eebcce95aa2ff80b3a23742b1e5a1c43cd54bc12d14d18dc2f
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+5ad0e9e6c6c5b5d671606bd490c9ebb13963f85a23b39e4529f6764f1e65fb30
+
+Docker ID is:
+ 5ad0e9e6c6c5 
+.................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+5ad0e9e6c6c5b5d671606bd490c9ebb13963f85a23b39e4529f6764f1e65fb30
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed570e8ad6294144dc3d014cb68cc98dba14c6671c70cea6d03a83eaa3756187f02e
+
+Docker ID is:
+ 0e8ad6294144 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+0e8ad6294144dc3d014cb68cc98dba14c6671c70cea6d03a83eaa3756187f02e
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57922d84ed5c3f2753ed1b703f7e072eacb7fef1f2f5633a69d0fbe91b8f35e7bd
+
+Docker ID is:
+ 922d84ed5c3f 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+se1m.R1.fastq.gz
+Started analysis of se1m.R1.fastq.gz_tmp
+Approx 10% complete for se1m.R1.fastq.gz_tmp
+Approx 20% complete for se1m.R1.fastq.gz_tmp
+Approx 30% complete for se1m.R1.fastq.gz_tmp
+Approx 40% complete for se1m.R1.fastq.gz_tmp
+Approx 50% complete for se1m.R1.fastq.gz_tmp
+Approx 60% complete for se1m.R1.fastq.gz_tmp
+Approx 70% complete for se1m.R1.fastq.gz_tmp
+Approx 80% complete for se1m.R1.fastq.gz_tmp
+Approx 90% complete for se1m.R1.fastq.gz_tmp
+Approx 100% complete for se1m.R1.fastq.gz_tmp
+Analysis complete for se1m.R1.fastq.gz_tmp
+922d84ed5c3f2753ed1b703f7e072eacb7fef1f2f5633a69d0fbe91b8f35e7bd
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+6de91fa434e68986b5341d161bda3a4bfcea2e3058b006eb89b292fc151489d5
+
+Docker ID is:
+ 6de91fa434e6 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+6de91fa434e68986b5341d161bda3a4bfcea2e3058b006eb89b292fc151489d5
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+74c54fbb321a745d841536ef7c812034fd08f72853e88389d95c8d7bf5a992db
+
+Docker ID is:
+ 74c54fbb321a 
+................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+74c54fbb321a745d841536ef7c812034fd08f72853e88389d95c8d7bf5a992db
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57b1e9b91636a31fd0755c25e4555ffbf74a63dea613a9485a483ada1b26b06b88
+
+Docker ID is:
+ b1e9b91636a3 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+b1e9b91636a31fd0755c25e4555ffbf74a63dea613a9485a483ada1b26b06b88
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed577ce19d9148d77c7b83408ab6a4b5dc1f9741a02c7f66c734e65452b21f36ec0e
+
+Docker ID is:
+ 7ce19d9148d7 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+sf1m.R1.fastq.gz
+Started analysis of sf1m.R1.fastq.gz_tmp
+Approx 5% complete for sf1m.R1.fastq.gz_tmp
+Approx 15% complete for sf1m.R1.fastq.gz_tmp
+Approx 25% complete for sf1m.R1.fastq.gz_tmp
+Approx 35% complete for sf1m.R1.fastq.gz_tmp
+Approx 45% complete for sf1m.R1.fastq.gz_tmp
+Approx 55% complete for sf1m.R1.fastq.gz_tmp
+Approx 65% complete for sf1m.R1.fastq.gz_tmp
+Approx 80% complete for sf1m.R1.fastq.gz_tmp
+Approx 90% complete for sf1m.R1.fastq.gz_tmp
+Approx 100% complete for sf1m.R1.fastq.gz_tmp
+Analysis complete for sf1m.R1.fastq.gz_tmp
+7ce19d9148d77c7b83408ab6a4b5dc1f9741a02c7f66c734e65452b21f36ec0e
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+9b54e97338489e5a745cb14db56f23eae285e5709a095f229facf90eb7a51897
+
+Docker ID is:
+ 9b54e9733848 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+9b54e97338489e5a745cb14db56f23eae285e5709a095f229facf90eb7a51897
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+7840dd8a6c39b2a08c15224ef61378bdd17de7c70d18b52b0eb11aa3d38c33e9
+
+Docker ID is:
+ 7840dd8a6c39 
+................................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+7840dd8a6c39b2a08c15224ef61378bdd17de7c70d18b52b0eb11aa3d38c33e9
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57ea694499fb94395351fceb40903186cdf95e72c8e6e0f0c4cf2deefd7ae8ce9b
+
+Docker ID is:
+ ea694499fb94 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+ea694499fb94395351fceb40903186cdf95e72c8e6e0f0c4cf2deefd7ae8ce9b
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed578e4b60f2e0ebd8036ebcf656343e8c594cd605c9c555a694bf53c2435e2d4402
+
+Docker ID is:
+ 8e4b60f2e0eb 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+sg1m.R1.fastq.gz
+Started analysis of sg1m.R1.fastq.gz_tmp
+Approx 10% complete for sg1m.R1.fastq.gz_tmp
+Approx 20% complete for sg1m.R1.fastq.gz_tmp
+Approx 30% complete for sg1m.R1.fastq.gz_tmp
+Approx 40% complete for sg1m.R1.fastq.gz_tmp
+Approx 50% complete for sg1m.R1.fastq.gz_tmp
+Approx 60% complete for sg1m.R1.fastq.gz_tmp
+Approx 70% complete for sg1m.R1.fastq.gz_tmp
+Approx 80% complete for sg1m.R1.fastq.gz_tmp
+Approx 90% complete for sg1m.R1.fastq.gz_tmp
+Approx 100% complete for sg1m.R1.fastq.gz_tmp
+Analysis complete for sg1m.R1.fastq.gz_tmp
+8e4b60f2e0ebd8036ebcf656343e8c594cd605c9c555a694bf53c2435e2d4402
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+6be21cc07e3069d1ba1af3e0366a74871bba9b9d6e4c90165e624a0126bdbac2
+
+Docker ID is:
+ 6be21cc07e30 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+6be21cc07e3069d1ba1af3e0366a74871bba9b9d6e4c90165e624a0126bdbac2
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+6347c63a0b6a789072dd86c657c227c4e94ffeaf508494103c4dcee6ce5ea794
+
+Docker ID is:
+ 6347c63a0b6a 
+...............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+6347c63a0b6a789072dd86c657c227c4e94ffeaf508494103c4dcee6ce5ea794
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed570013bf18ed3d5e74c8ab04ac78588e3cfe236885c9cc26b382a6ced1a8ca5e06
+
+Docker ID is:
+ 0013bf18ed3d 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+0013bf18ed3d5e74c8ab04ac78588e3cfe236885c9cc26b382a6ced1a8ca5e06
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+There were 28 warnings (use warnings() to see them)
+> 
+> 
+> proc.time()
+    user   system  elapsed 
+  60.042   37.395 5775.350 
