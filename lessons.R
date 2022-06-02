@@ -14,5 +14,6 @@ downloadContainers(group="docker")
 # in cd dataset0 cartella del file -> fastqc ra100k.R1.fastq
 
 #MultiQC directly from the terminal with docker container 
+#cd folder containing the file 
 #docker run -t -v `pwd`:`pwd` -w `pwd` ewels/multiqc
 
