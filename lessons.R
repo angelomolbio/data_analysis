@@ -49,3 +49,16 @@ downloadContainers(group="docker")
 #docker run -i -t r4:v.0.01 #run again the docker
 #sudo ls #check that the changes were saved
 #exit
+
+#LESSON4 CELL RANGER
+#docker run r4:v.0.01
+#apt-get install -y wget
+#in cd /bin paste the wget from cell ranger website 
+#gzip -d  cellranger-7.0.0.tar.gz to unzip
+#tar xvf cellranger-7.0.0.tar to separate the folders 
+#exit and docker commit istance r4:v.0.01
+#nano ~/.bashrc enter the editor and add export PATH=/bin/cellranger-7.0.0:$PATH
+#to exit editor control+x and then Y and enter
+#exit  and commit 
+
+
