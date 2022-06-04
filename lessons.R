@@ -60,5 +60,9 @@ downloadContainers(group="docker")
 #nano ~/.bashrc enter the editor and add export PATH=/bin/cellranger-7.0.0:$PATH
 #to exit editor control+x and then Y and enter
 #exit  and commit 
-
-
+###RUNNING FROM THE INSIDE OF THE DOCKER 
+#docker run -i -t -v path/of/the/folder:/home r4:v.0.0.1
+#in home create the folder with command mkdir "nomedelladir"
+#exit and commit 
+###Run cellranger with a shell command to execute mat2csv interactively
+#
