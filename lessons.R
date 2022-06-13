@@ -66,3 +66,16 @@ downloadContainers(group="docker")
 #exit and commit 
 ###Run cellranger with a shell command to execute mat2csv interactively
 #
+
+
+
+
+#PCA function library(docker4seq) pca(
+#experiment.table = "./_counts.txt",
+#type = c("counts", "FPKM", "TPM"),
+#covariatesInNames = FALSE,
+#samplesName = TRUE,
+#principal.components = c(1, 2),
+#legend.position = c("bottom", "bottomleft", "left", "topleft", "top", "topright",
+#                    "right", "center"), pdf = TRUE, output.folder = getwd()
+#)
