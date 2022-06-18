@@ -61,12 +61,22 @@ downloadContainers(group="docker")
 #to exit editor control+x and then Y and enter
 #exit  and commit 
 ###RUNNING FROM THE INSIDE OF THE DOCKER 
-#docker run -i -t -v path/of/the/folder:/home r4:v.0.0.1
+#docker run -i -t -v path/of/the/folder:/home r4:v.0.0.1 mounting of the file in the docker 
 #in home create the folder with command mkdir "nomedelladir"
 #exit and commit 
+#to run cell ranger 
+#cellranger mat2csv /home /pathtotheputput/nameoftheoutput.csv
 ###Run cellranger with a shell command to execute mat2csv interactively
-#
-
+#use nano to edit a bashcommand.sh file and write the previous command (nano bashcommand.sh)
+#chmod +x ./bashcommand.sh (to make it executable, ./ indicates home as directory)
+#bashcommand.sh and run it 
+#exit and commit 
+#RUN CELLRANGER WITH A SHELL COMMAND TO EXECUTE MAT2CSV IN BACKGROUND 
+#basically type nohup before (nohup ./bashcommand.sh &) and works in background 
+#RUN FROM THE TERMINAL OUTSIDE THE DOCKER 
+#write a bash in this way (/bin/cellranger-7(checkversion)/cellranger mat2csv/home /home/data/data.csv)
+#exit and commit 
+#docker run -it pathofthematrixfolder:/home r4:v.0.01 /bin/bash /pathofthe/bashfile.sh
 
 
 
@@ -350,9 +360,9 @@ dev.off()
 library(umap)
 library(ggplot2)
 umap<- read.table("RNA-5c_log2cpm.csv", sep=",", header=T, row.names=1)
-umap.labels <- sapply(strsplit(names(ctrl), '\\.'), function(x)x[2])
+umap.labels <- sapply(strsplit(names(umap), '\\.'), function(x)x[2])
 cell_line <- as.factor(umap.labels)
-sc.umap <- umap (t(ctrl), random_state=111, n_epochs=1000)
+sc.umap <- umap (t(umap), random_state=111, n_epochs=1000)
 u=data.frame (x=as.numeric(sc.umap$layout[,1]), y=as.numeric(sc.umap$layout[,2]))
 sp <- ggplot(u,aes(x=x,y=y))+geom_point(pch=19, cex=0.3, color='darkblue')
 pdf("UMAP_RNA-5c.pdf")
@@ -360,7 +370,75 @@ print(sp)
 dev.off()
 
 #to add colours
+#same count2cpm function
+saver_RNA <- read.table("saver_RNA-5c.csv", sep=",", header=TRUE, row.names=1)
+#run the function and change the name
+counts2cpm(file="saver_RNA-5c.csv", sep=",")
+file.rename(from="log2cpm.csv", to="RNA-5c_log2cpm.csv")
+library(Rtsne)
+library(ggplot2)
+#put log2cpm in a variable 
 log2cpm_RNA<- read.table("RNA-5c_log2cpm.csv", sep=",", header=TRUE, row.names=1)
 tsne_out <- Rtsne(as.matrix(t(log2cpm_RNA)), pca=FALSE, perplexity=30, theta=0.0)
 t=data.frame(x=as.numeric(tsne_out$Y[,1]), y=tsne_out$Y[,2])
+#to differentiate the cell lines in the table 
+cell_names <- strsplit(colnames(log2cpm_RNA), '\\.')
+#adding a column with the cell lines to the t dataframe and factor it 
+matrix_cellnames <- matrix (unlist(cell_names), ncol=2, byrow=TRUE)
+t$cell_line=matrix_cellnames[,2]
+t$cell_line <- factor(t$cell_line)
+#adding the rownames to t
+rownames(t) <- colnames (log2cpm_RNA)
+#plotting tSNE
+sp <- ggplot (t, aes (x=x, y=y,color=cell_line)) + geom_point(pch=19, cex=0.3)
+pdf("tSNE_RNA-5c2.pdf")
+print(sp)
+dev.off()
 
+getwd()
+setwd("/Users/angeloscarciglia/Desktop")
+
+#running umap
+library(umap)
+library(ggplot2)
+umap<-log2cpm_RNA
+umap.labels <- matrix_cellnames[,2]
+cell_line <- as.factor(umap.labels)
+umap_5c <- umap(t(umap), random_state=111, n_epochs=1000)
+u=data.frame (x=as.numeric(umap_5c$layout[,1]), y=as.numeric(umap_5c$layout[,2]), cell_line=cell_line)
+ #adding row names to u 
+rownames(u)<- colnames(log2cpm_RNA)
+head(u)
+#plotting umap
+sp <- ggplot (u, aes(x=x, y=y, color=cell_line))+geom_point(pch=19, cex=0.3)
+pdf("UMAP_RNA-5C3.pdf")
+print("sp")
+dev.off()
+
+#apply now the kmenas clustering using mbkmeans
+#start from the UMAP output (umap_5c). to see the strtucture str(umap_5c)
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("mbkmeans")
+
+str(umap_5c)
+u_kmeans <- kmeans (umap_5c$layout,5)
+#now plot the results that are conatined in the kmeans results
+#colors in a as.numeroc otherwise ggplot does nnot work 
+plot <- ggplot(u, aes(x=x,y=y))+geom_point(pch=19, cex=0.3, color=as.numeric(u_kmeans$cluster))
+
+pdf("u_kmeans.pdf")
+print(plot)
+dev.off()
+
+#now use clusterR
+install.packages("ClusterR")
+library(ClusterR)
+library(ggplot2)
+km <- KMeans_arma (umap_5c$layout, clusters=5, n_iter=10, seed_mode="random_subset", verbose=T, CENTROIDS=NULL)
+pr <- predict_KMeans (umap_5c$layout, km)
+plotR <- ggplot(u,aes(x=x, y=y))+geom_point(pch=19, cex=0.3, color=as.numeric(pr))
+pdf ("ClusterR_kmeans.pdf")
+print(plotR)
+dev.off()
